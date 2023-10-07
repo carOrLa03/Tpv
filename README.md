@@ -60,5 +60,7 @@ En el documento "tsconfig.json",  en "angularCompileOptions" quede de la siguien
 ## Creación de un servicio TPV
 1. ng g s services/tpvServicio
 
+Servicio desde el cual, mediante un único método, nos comunicaremos con el servicio de Redsys para que nos confirme que podemos realizar el pago si los datos enviados son correctos.
+
 ## Creación de un componente Iframe
 
