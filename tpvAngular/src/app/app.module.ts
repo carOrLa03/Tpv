@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentsModule } from './components/components.module';
 import { TpvServicioService } from './services/tpv-servicio.service';
+import { TpvComponent } from './tpv/tpv.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TpvComponent
   ],
   imports: [
     BrowserModule,

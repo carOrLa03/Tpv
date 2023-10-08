@@ -103,3 +103,9 @@ export class ComponentsModule { }
 
 Primero creamos un modulo para crear todos los componentes de nuestra aplicación, y en el segundo comando creamos un componente iframe, que a su vez será un dialogo de Material, que se abrirá cuando hagamos la llamada al TPV Virtual, dentro de nuestra aplicación sin que se rompa la sesión del usuaio.
 
+## Creación de un componente TPV 
+
+1. ng g c tpv
+
+Comopnente desde el cual mandatemos los datos del usuario necesarios para realizar el pago. En este caso, y debido a las bbdd muestro el componente pero no los datos enviados. pero los PARÁMETROS que se pasan al dialogo, han de ser todos ellos string. Si se tiene alguna duda, en la página de documentación que proporciona REDSYS para la implantación de su TPV nos explica cada uno de los PRÁMETROS necesarios y obligatorios.
+
