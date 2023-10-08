@@ -1,13 +1,18 @@
-<div>
-    <h1>Realiza tus pagos</h1>
-</div>
-<div>
-    <p>Hola usuario XXXXXX</p>
-</div>
-<div>
-    <div>
-        <p>Apretando el siguiente boton se abrirá un diálogo desde el cual realizaras tu pago.</p>
+
+
+
+<p-card header="Realiza tus pagos" [style]="{ width: '360px' }">
+    <div class="m-0">
+        <div>
+            <p>Hola usuario XXXXXX</p>
+            <p>Apretando el siguiente boton se abrirá un diálogo desde el cual realizaras tu pago.</p>
+        </div>
+        <div>
+            <p-button label="Pagar" (click)="hacerPago('anual')"></p-button>
+            <p-button label="Cancelar" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+        </div>
+
     </div>
-    <div><button (click)="hacerPago('anual')">Pagar</button></div>
-</div>
+</p-card>
+
 
