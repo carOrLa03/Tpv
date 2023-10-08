@@ -62,5 +62,44 @@ En el documento "tsconfig.json",  en "angularCompileOptions" quede de la siguien
 
 Servicio desde el cual, mediante un único método, nos comunicaremos con el servicio de Redsys para que nos confirme que podemos realizar el pago si los datos enviados son correctos.
 
+En el archivo appmodule.ts deberemos declarar el servicio creado, para poder acceder a el desde cualquier parte de nuestra aplicación:
+~~~
+  providers: [
+    TpvServicioService
+  ],
+~~~
+
 ## Creación de un componente Iframe
+1. ng g m components
+2. ng g c components/iframeTpv
+El archivo componentsmodule.ts quedará de la siguiente manera:
+~~~
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { IframeTpvComponent } from './iframe-tpv/iframe-tpv.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+
+
+@NgModule({
+  declarations: [
+    IframeTpvComponent
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
+    RouterModule
+  ],
+  exports: [
+    IframeTpvComponent
+  ]
+})
+export class ComponentsModule { }
+~~~
+
+Primero creamos un modulo para crear todos los componentes de nuestra aplicación, y en el segundo comando creamos un componente iframe, que a su vez será un dialogo de Material, que se abrirá cuando hagamos la llamada al TPV Virtual, dentro de nuestra aplicación sin que se rompa la sesión del usuaio.
 

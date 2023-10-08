@@ -6,12 +6,14 @@ import * as CryptoJS from 'crypto-js'
 })
 export class TpvServicioService {
 
-  private merchantKey = 'sq7HjrUOBfKmC576ILgskD5srU870gJ7'; //clave secreta
-  private urlRedsys = 'https://sis-t.redsys.es:25443/sis/realizarPago';
 
   //PARAMETROS TPV
+  private merchantKey = 'Clave secreta'; //clave secreta 
+  private urlRedsys = 'https://sis-t.redsys.es:25443/sis/realizarPago';
   Ds_SignatureVersion: string = 'HMAC_SHA256_V1' //versión del algoritmo de firma
-  DS_Signature: string = "PqV2+SF6asdasMjXasKJRTh3UIYya1hmU/igHkzhC+R=" //Firma de los datos de la petición de pago
+  DS_Signature: string = "Firma de los datos de la petición" //Firma de los datos de la petición de pago
+
+
 
   constructor() { }
 
